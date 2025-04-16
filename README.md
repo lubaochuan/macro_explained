@@ -55,8 +55,9 @@ Let's analyze this:
 
 * `(define-syntax my-or ...)`: We are defining a macro named `my-or`.
 * `(syntax-rules () ...)`: The empty list `()` means there are no literal identifiers that need to be matched literally.
-* `((my-or a) a)`: This is the first clause. If the input form looks like `(my-or <expression>)`, the macro will expand to just `<expression>`.
-* `((my-or a b ...) ...)`: This is the second clause. If the input form looks like `(my-or <expression1> <expression2> ...)`, the macro will expand to a `let` expression.
+* `((my-or) #f)`: This is the first clause. If the input form looks like `(my-or)`, the macro will expand to just `#f`.
+* `((my-or a) a)`: This is the second clause. If the input form looks like `(my-or <expression>)`, the macro will expand to just `<expression>`.
+* `((my-or a b ...) ...)`: This is the third clause. If the input form looks like `(my-or <expression1> <expression2> ...)`, the macro will expand to a `let` expression.
     * `a` and `b ...` are pattern variables. `a` will match the first expression after `my-or`, and `b ...` will match the rest (if any). The `...` indicates a sequence that can match zero or more occurrences.
     * The template uses these pattern variables:
         ```scheme
