@@ -1,4 +1,4 @@
-Let's divE into a powerful and sometimes mind-bending feature of Scheme: **macros**.
+Let's dive into a powerful and sometimes mind-bending feature of Scheme: **macros**.
 
 Many of you are familiar with functions. Functions take *values* as input and produce *values* as output. Macros, on the other hand, operate at a different level. They take *code* as input and produce *code* as output. Think of them as code transformers or code generators.
 

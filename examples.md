@@ -48,3 +48,9 @@
   (newline)
   (display (list 'j '= j)))
 ```
+
+Sources:
+* https://www.scheme.com/tspl4/further.html#./further:h1
+* https://www.shido.info/lisp/scheme_syntax_e.html
+* https://artificialworlds.net/blog/2012/07/02/scheme-7-macros-video/
+* named let https://docs.racket-lang.org/guide/let.html#(part._.Named_let)
